@@ -43,5 +43,18 @@ class Team
     "#{"total_value"}"=> total_value
   }
   end
+
+  def average_cost_of_player
+    average_cost = total_value / 4
+    average_cost.to_s
+  end
+
+  def players_by_last_name
+    last_names = []
+    roster.each do |player|
+      last_names << player.last_name
+    end
+    last_names.sort.join(", ")
+  end
   
 end
