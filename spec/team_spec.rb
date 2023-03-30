@@ -79,11 +79,11 @@ RSpec.describe Team do
       team.add_player(player_3)
       team.add_player(player_4)
 
-      expect(team.total_values).to eq(85200000)
+      expect(team.total_value).to eq(85200000)
     end
 
 
-    xit 'has team details' do
+    it 'has team details' do
       team = Team.new("Dodgers", "Los Angeles")
 
       player_1 = Player.new("Michael Palledorous" , 1000000, 36)

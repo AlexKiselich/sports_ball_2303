@@ -26,21 +26,22 @@ class Team
       player.contract_length
     end
   
-end
-
-
-def total_values
-  total = []
-  roster.each do |player|
-    total << player.total_cost
   end
-  total.sum
-end
 
 
-def details
-  
-end
+  def total_value
+    total = []
+    roster.each do |player|
+      total << player.total_cost
+    end
+    total.sum
+  end
 
+  def details
+  {
+    "#{"player_count"}"=> player_count,
+    "#{"total_value"}"=> total_value
+  }
+  end
   
 end
